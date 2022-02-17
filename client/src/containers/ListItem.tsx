@@ -11,7 +11,7 @@ export interface ListItemProps {
 
 function ListItem({ item }: ListItemProps) {
   return (
-    <Link to={item.id.toString()}>
+    <Link to={"/list/" + item.id.toString()}>
       <ListItemContainer>
         <ImgContainer rndColor={randomColor()}>
           <Avatar>
