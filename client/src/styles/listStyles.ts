@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ListItemContainer = styled.div`
-margin-bottom: 20px;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-padding: 10px;
-background-color: #ededed;
-border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-color: #ededed;
+  border-radius: 10px;
 `;
 
 export interface PropsImg {
@@ -27,25 +27,24 @@ export const ImgContainer = styled.div<PropsImg>`
 export const InfoContainer = styled.div`
   margin-left: 28px;
   font-size: 3rem;
-`
+`;
 
 export const Avatar = styled.div`
-  color:white;
+  color: white;
   font-size: 5rem;
   font-weight: bold;
-`
-
+`;
 
 export const ListItemContainerDetils = styled.div`
   margin-top: 38px;
   display: flex;
   align-items: center;
   flex-direction: column;
-`
+`;
 
 export const ImgContainerDetails = styled(ImgContainer)`
   margin-bottom: 30px;
-`
+`;
 
 export const Details = styled.div`
   background-color: #dedede;
@@ -56,13 +55,13 @@ export const Details = styled.div`
   color: #000;
   font-size: 2rem;
   margin-bottom: 28px;
-`
+`;
 
 export const Button = styled.button`
-    padding: 15px;
-    margin: 20px;
-    background-color: #4cc9e7;
-    color: white;
-    font-size: 2rem;
-    border-radius: 10px;
-`
+  padding: 15px;
+  margin: 20px;
+  background-color: #4cc9e7;
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+`;

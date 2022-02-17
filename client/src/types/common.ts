@@ -41,10 +41,9 @@ export interface StoreAction<T = any> {
 }
 
 export interface List {
-  id: number
-  title: string
-  data: string
+  id: number;
+  title: string;
+  data: string;
 }
-
 
 export type Transitions = 'fade' | 'slideDown' | 'slideLeft' | 'slideRight' | 'slideUp';

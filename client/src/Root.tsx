@@ -65,8 +65,18 @@ function Root() {
                 path="/"
                 to="/list"
               />
-              <RoutePrivate component={ListPage} isAuthenticated={isAuthenticated} path="/list" exact />
-              <RoutePrivate component={ListDetails} isAuthenticated={isAuthenticated} path="/list/:id" exact />
+              <RoutePrivate
+                component={ListPage}
+                isAuthenticated={isAuthenticated}
+                path="/list"
+                exact
+              />
+              <RoutePrivate
+                component={ListDetails}
+                isAuthenticated={isAuthenticated}
+                path="/list/:id"
+                exact
+              />
               <Route component={NotFound} />
             </Switch>
           </Main>

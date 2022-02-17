@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { configStore } from 'store';
 
-
 import Loader from 'components/Loader';
 import ErrorHandler from 'containers/ErrorHandler';
 import GlobalStyles from 'containers/GlobalStyles';
@@ -34,8 +33,7 @@ ReactDOM.render(
 
 /* istanbul ignore next */
 register({
-  onUpdate: () => {
-  },
+  onUpdate: () => {},
 });
 
 // If you want to start measuring performance in your app, pass a function

@@ -6,8 +6,8 @@ import { ListState, List } from 'types';
 
 const item: List = {
   id: 0,
-  title: "",
-  data: "",
+  title: '',
+  data: '',
 };
 
 export const listState: ListState = {
@@ -19,7 +19,7 @@ export default {
     {
       [ActionTypes.LIST_GET_REQUEST]: (draft, { payload }) => {
         draft.list = draft.list || { ...item };
-        draft.list = []
+        draft.list = [];
       },
       [ActionTypes.LIST_GET_SUCCESS]: (draft, { payload }) => {
         draft.list = payload;

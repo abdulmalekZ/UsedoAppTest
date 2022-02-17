@@ -4,23 +4,18 @@ import { ListItemContainer, ImgContainer, Avatar, InfoContainer } from 'styles/l
 import { List } from 'types/common';
 var randomColor = require('randomcolor');
 
-
 export interface ListItemProps {
   item: List;
 }
 
 function ListItem({ item }: ListItemProps) {
   return (
-    <Link to={"/list/" + item.id.toString()}>
+    <Link to={'/list/' + item.id.toString()}>
       <ListItemContainer>
         <ImgContainer rndColor={randomColor()}>
-          <Avatar>
-            {item.title.slice(0,2,).toUpperCase()}
-          </Avatar>
+          <Avatar>{item.title.slice(0, 2).toUpperCase()}</Avatar>
         </ImgContainer>
-        <InfoContainer>
-          {item.title}
-        </InfoContainer>
+        <InfoContainer>{item.title}</InfoContainer>
       </ListItemContainer>
     </Link>
   );

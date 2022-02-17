@@ -8,8 +8,8 @@ import { appColor, headerHeight, spacer } from 'modules/theme';
 import { logOut } from 'actions';
 
 const Logo = styled.span`
-  color: white
-`
+  color: white;
+`;
 
 const HeaderWrapper = styled.header`
   background-color: #113740;
@@ -71,9 +71,7 @@ export default function Header() {
   return (
     <HeaderWrapper data-testid="Header">
       <HeaderContainer>
-        <Logo>
-          UsedoApp Test
-          </Logo>
+        <Logo>UsedoApp Test</Logo>
         <Logout onClick={handleClickLogout}>
           <span>logout</span>
         </Logout>

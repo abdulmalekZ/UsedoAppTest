@@ -10,4 +10,6 @@ import { List } from 'types/common';
 
 export const getList = createAction(ActionTypes.LIST_GET_REQUEST, () => ({}));
 
-export const getMore = createAction(ActionTypes.LIST_GET_MORE_REQUEST, (prevData: List[]) => ({prevData}));
+export const getMore = createAction(ActionTypes.LIST_GET_MORE_REQUEST, (prevData: List[]) => ({
+  prevData,
+}));

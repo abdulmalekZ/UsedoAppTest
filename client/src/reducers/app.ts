@@ -15,7 +15,7 @@ export default {
     {
       [REHYDRATE]: draft => {
         draft.alerts = [];
-      }
+      },
     },
     appState,
   ),
