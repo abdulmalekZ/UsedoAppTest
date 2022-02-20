@@ -37,7 +37,7 @@ npm run ios
 ```
 This will install Pods and then run the app on an iOS simulator if you are running from a Mac device
 
-#### iOS
+#### Android
 Open another console and go to the root of the application folder and run: 
 ```bash
 npm run android
