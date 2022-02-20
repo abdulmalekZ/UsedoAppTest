@@ -4,11 +4,13 @@ This is the solution to the UsedoApp Task
 
 This contains two folders:
 
-### server
+## server
 Contains node.js Express server to serve the get list api
 
-### application
+## application
 Contains the React Native App using Redux and Redux-saga
+
+
 
 ## Installation
 
@@ -17,6 +19,7 @@ Run the following code at the root of the server and application folder
 ```bash
 npm install
 ```
+
 
 ## Usage
 ### server
@@ -43,4 +46,6 @@ This will run the app on an Android simulator
 
 
 ### Notes
-I have hosted the server portion of this submission on Render servers and the React Native App will use the remote url by default so there's no need to run the server application on your machine
+I have hosted the server portion of this submission on Render servers and the React Native App will use the remote url by default so there's no need to run the server application on your machine.
+
+The remote URL being used : [https://usedotestserver.onrender.com/getList](https://usedotestserver.onrender.com/getList)

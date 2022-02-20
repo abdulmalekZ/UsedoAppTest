@@ -14,7 +14,7 @@ import { StoreAction } from '../types';
 export function* getList({ payload }: StoreAction) {
   try {
     let items;
-    ({ items = [] } = yield call(request, `http://localhost:3003/getList`));
+    ({ items = [] } = yield call(request, `https://usedotestserver.onrender.com/getList`));
 
     yield put({
       type: ActionTypes.LIST_GET_SUCCESS,
@@ -33,7 +33,7 @@ export function* getListMore({ payload }: StoreAction) {
   const { prevData } = payload;
   try {
     let items;
-    ({ items = [] } = yield call(request, `http://localhost:3003/getList`));
+    ({ items = [] } = yield call(request, `https://usedotestserver.onrender.com/getList`));
 
     yield put({
       type: ActionTypes.LIST_GET_MORE_SUCCESS,
