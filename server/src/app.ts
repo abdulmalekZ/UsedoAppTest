@@ -4,11 +4,8 @@ import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
 import hpp from 'hpp';
-import morgan from 'morgan';
-import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 import { Routes } from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
-import { logger, stream } from '@utils/logger';
 
 class App {
   public app: express.Application;
@@ -17,7 +14,7 @@ class App {
 
   constructor(routes: Routes[]) {
     this.app = express();
-    this.env = NODE_ENV || 'development';
+    this.env = 'development';
     this.port = 3003;
 
     this.initializeMiddlewares();
@@ -27,10 +24,10 @@ class App {
 
   public listen() {
     this.app.listen(this.port, () => {
-      logger.info(`=================================`);
-      logger.info(`======= ENV: ${this.env} =======`);
-      logger.info(`🚀 App listening on the port ${this.port}`);
-      logger.info(`=================================`);
+      console.info(`=================================`);
+      console.info(`======= ENV: ${this.env} =======`);
+      console.info(`🚀 App listening on the port ${this.port}`);
+      console.info(`=================================`);
     });
   }
 
@@ -39,8 +36,7 @@ class App {
   }
 
   private initializeMiddlewares() {
-    this.app.use(morgan(LOG_FORMAT, { stream }));
-    this.app.use(cors({ origin: ORIGIN, credentials: CREDENTIALS }));
+    this.app.use(cors({ origin: '*' }));
     this.app.use(hpp());
     this.app.use(helmet());
     this.app.use(compression());
